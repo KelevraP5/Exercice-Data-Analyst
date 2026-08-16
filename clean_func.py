@@ -1,4 +1,5 @@
 
+from asyncio import Condition
 import re
 from decimal import InvalidOperation
 
@@ -8,11 +9,16 @@ import pandas as pd
 from database import load_data
 
 
-def load_and_tag_ville(raw_db = str, cols = list, ville_name = None) -> pd.DataFrame :
+def load_and_tag_ville(raw_db = str, cols = list, initials_ville = None) -> pd.DataFrame :
     df = load_data(raw_db, cols)
 
-    if ville_name != None :
-        df.insert(0, "ville", ville_name)
+    df = df.reset_index(drop=True)
+
+    if initials_ville is not None :
+
+        initials_ville = str(initials_ville)
+        col_id = (df.index + 1).astype(str)
+        df.insert(0, "ville_id", initials_ville + "-" + col_id)
 
     return df
 
@@ -152,3 +158,18 @@ def check_type_repair(good_df, col, checked_dict, col_final) :
     good_df[col_final] = np.select(conditions, choix, default= None)
 
     return good_df
+
+def rearrange_data(df, col = str, split = False, checked_word = str | None, col_output = str, value_output = None) :
+    if checked_word is not None :
+        condition = df[col].str.lower().str.contains(checked_word, na=False)
+
+        df.loc[condition, col_output] = value_output
+
+    else :
+        if split != False :
+            checked_word = df[col].str
+            value_output = checked_word[-1].astype(int)
+
+            df[col_output] = value_output
+
+    return df

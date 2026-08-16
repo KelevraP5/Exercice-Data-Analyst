@@ -7,3 +7,5 @@ ENV/
 
 __pycache__/
 *.pyc
+
+*.html
