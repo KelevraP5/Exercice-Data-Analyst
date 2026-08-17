@@ -9,3 +9,5 @@ __pycache__/
 *.pyc
 
 *.html
+credentials.json
+google_keys.json
