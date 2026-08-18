@@ -134,7 +134,7 @@ good_data_montauban, df_montauban = rearrange_loc_date(good_data_montauban, df_m
 good_data_nancy, df_nancy = rearrange_loc_date(good_data_nancy, df_nancy)
 good_data_lyon, df_lyon = rearrange_loc_date(good_data_lyon, df_lyon)
 
-good_data_havre = check_type_repair(good_data_havre, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparation")
-good_data_montauban = check_type_repair(good_data_montauban, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparation")
-good_data_nancy = check_type_repair(good_data_nancy, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparation")
-good_data_lyon = check_type_repair(good_data_lyon, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparation")
+good_data_havre = check_type_repair(good_data_havre, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparations")
+good_data_montauban = check_type_repair(good_data_montauban, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparations")
+good_data_nancy = check_type_repair(good_data_nancy, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparations")
+good_data_lyon = check_type_repair(good_data_lyon, "piece_nom", {"huile" : 1, "frein" : 2, "batterie" : 3}, "id_type_reparations")

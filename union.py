@@ -1,3 +1,4 @@
+
 import numpy as np
 import pandas as pd
 
@@ -29,10 +30,9 @@ full_data = rearrange_data(df=full_data, col="garage_vehicule_categorie", split=
 full_data = rearrange_data(df=full_data, col="garage_vehicule_categorie", split=False, checked_word="suv", col_output="id_tarif_loc", value_output=3)
 full_data = rearrange_data(df=full_data, col="garage_vehicule_categorie", split=False, checked_word="utilitaire", col_output="id_tarif_loc", value_output=4)
 
-full_data = rearrange_data(df=full_data, col="piece_ref", split=True, checked_word=None, col_output="id_piece")
+full_data = rearrange_data(df=full_data, col="piece_ref", split=True, checked_word=None, col_output="id_pieces")
 
 full_data["id_voiture"] = full_data["id"]
 full_data["id_voiture_client"] = full_data["id"]
 full_data["id_client"] = full_data["id"]
-full_data["id_reparation"] = full_data["id"]
-
+full_data["id_reparations"] = full_data["id"]
