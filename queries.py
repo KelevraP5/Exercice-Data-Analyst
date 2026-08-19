@@ -38,3 +38,12 @@ pieces_query = "SELECT " \
 "g.nom AS garage_nom " \
 "FROM pieces p " \
 "LEFT JOIN garage g ON p.id_garage = g.id"
+
+reparations_query = "SELECT " \
+"r.temps_reparation, " \
+"r.prix, " \
+"tr.niveau_taux_horaires_main_oeuvre AS type_reparations, " \
+"g.nom AS garage_nom " \
+"FROM reparations r " \
+"LEFT JOIN garage g ON r.id_garage = g.id " \
+"LEFT JOIN type_reparations tr ON r.id_type_reparations = tr.id"
