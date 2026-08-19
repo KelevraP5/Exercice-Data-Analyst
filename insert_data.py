@@ -8,7 +8,7 @@ from queries import (
     garage_query,
     loc_pret_query,
     pieces_query,
-    reparations_query
+    reparations_query,
 )
 from rename_columns import (
     data_client,
