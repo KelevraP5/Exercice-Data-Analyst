@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 base_dir = Path(__file__).resolve().parent
 
-raw_data_dir = base_dir / "donnees_brutes"
+raw_data_dir = base_dir / "data" / "donnees_brutes"
 
 load_dotenv()
 

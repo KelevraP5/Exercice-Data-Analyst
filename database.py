@@ -23,7 +23,6 @@ def insert_clean_data (data_to_send, table_name) :
             con=clean_engine,
             if_exists="append",
             index=False,
-            chunksize=500
         )
 
         print(f"Les données ont bien été envoyées à la table {table_name} !")

@@ -1,5 +1,3 @@
-# Clean Le Havre
-
 from clean_func import (
     check_type_repair,
     clean_date,
@@ -17,6 +15,8 @@ from clean_func import (
 list_cols_to_clean = ["client_nom", "client_prenom", "client_telephone", "employe_nom", "employe_prenom", "employe_salaire", "reparation_date_entree", "reparation_date_sortie", "reparation_temps", "reparation_prix", "location_type", "location_prix_ht", "piece_stock", "piece_quantite_utilisee"]
 
 list_reste_data = ["garage_id", "antenne_id", "client_vehicule_type", "client_vehicule_marque", "client_vehicule_couleur", "client_vehicule_immat" ,"employe_poste", "garage_vehicule_categorie", "garage_vehicule_marque", "garage_vehicule_couleur", "garage_vehicule_immat", "date_debut_location", "date_fin_location", "piece_ref", "piece_nom", "piece_prix_achat", "piece_prix_vente"]
+
+# Clean Le Havre
 
 df_le_havre = load_and_tag_ville("raw_le_havre", list_cols_to_clean, "LH")
 
