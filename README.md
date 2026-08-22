@@ -124,11 +124,11 @@ Créez un Google Sheets, puis allez sur [Google Cloud Service](https://console.c
 
 Sélectionnez votre projet nouvellement créé puis allez sur `API et services` puis sur `Activer les API et services`. Pour que l'insertion marche, il va falloir deux API :
 *   ```
-Google Sheets API
-```
+    Google Sheets API
+    ```
 *   ```
-Google Drive API
-```
+    Google Drive API
+    ```
 
 Une fois cela fait, dans `API et services` allez dans :
 - `Identifiants`
